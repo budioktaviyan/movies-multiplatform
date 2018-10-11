@@ -1,0 +1,30 @@
+allprojects {
+    buildscript {
+        ext.kotlin_version = '1.2.71'
+        ext.kotlin_native_version = '0.9.2'
+        ext.coroutines_version = '0.30.2'
+        ext.serialization_version = '0.6.2'
+        ext.android_plugin_version = '3.2.1'
+
+        repositories {
+            maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+            maven { url "https://kotlin.bintray.com/kotlin-eap" }
+            maven { url "https://kotlin.bintray.com/kotlinx" }
+            google()
+            jcenter()
+        }
+
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+            classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version"
+            classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$serialization_version"
+            classpath "com.android.tools.build:gradle:$android_plugin_version"
+        }
+    }
+
+    repositories {
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        google()
+        jcenter()
+    }
+}

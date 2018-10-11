@@ -1,0 +1,15 @@
+apply plugin: 'kotlin-platform-native'
+
+dependencies {
+    expectedBy project(':common')
+}
+
+sourceSets {
+    main {
+        component {
+            targets = ['ios_x64', 'ios_arm64']
+            outputKinds = [KLIBRARY]
+            extraOpts '--disable', 'devirtualization', '-module_name', 'K'
+        }
+    }
+}

@@ -1,0 +1,15 @@
+apply plugin: 'kotlin-platform-common'
+
+dependencies {
+    api project(':common')
+
+    api 'org.jetbrains.kotlin:kotlin-stdlib-common'
+    api "org.jetbrains.kotlinx:kotlinx-serialization-runtime-jsonparser:$serialization_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
