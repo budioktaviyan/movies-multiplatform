@@ -1,0 +1,3 @@
+package id.kotlin.multiplatform.presentation
+
+interface MovieContract
