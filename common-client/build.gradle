@@ -6,6 +6,7 @@ dependencies {
     api 'org.jetbrains.kotlin:kotlin-stdlib-common'
     api "org.jetbrains.kotlinx:kotlinx-serialization-runtime-jsonparser:$serialization_version"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
+    api "io.ktor:ktor-client:$ktor_version"
 }
 
 kotlin {

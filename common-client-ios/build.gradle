@@ -6,6 +6,7 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:jsonparser-native:$serialization_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
+    implementation "io.ktor:ktor-client-ios:$ktor_version"
 }
 
 sourceSets {
