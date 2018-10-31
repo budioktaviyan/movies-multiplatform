@@ -1,5 +1,4 @@
 rootProject.name = 'movies-multiplatform'
-
-include 'common', 'common-jvm', 'common-ios', 'common-client', 'common-client-jvm', 'common-client-ios', 'android'
-
 enableFeaturePreview('GRADLE_METADATA')
+
+include 'common', 'common-android', 'android', 'common-ios'
