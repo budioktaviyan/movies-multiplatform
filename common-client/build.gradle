@@ -1,12 +1,11 @@
 apply plugin: 'kotlin-platform-common'
 
 dependencies {
-    api project(':common')
-
-    api 'org.jetbrains.kotlin:kotlin-stdlib-common'
-    api "org.jetbrains.kotlinx:kotlinx-serialization-runtime-jsonparser:$serialization_version"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
-    api "io.ktor:ktor-client:$ktor_version"
+    compile project(':common')
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-common'
+    compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime-jsonparser:$serialization_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
+    compile "io.ktor:ktor-client:$ktor_version"
 }
 
 kotlin {

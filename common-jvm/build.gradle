@@ -2,7 +2,7 @@ apply plugin: 'kotlin-platform-jvm'
 
 dependencies {
     expectedBy project(':common')
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 }
 
 compileKotlin {

@@ -2,14 +2,14 @@ apply plugin: 'kotlin-platform-native'
 
 dependencies {
     expectedBy project(':common-client')
-    implementation project(':common-ios')
-
-    implementation "org.jetbrains.kotlinx:jsonparser-native:$serialization_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
-    implementation "io.ktor:ktor-client-ios:$ktor_version"
+    compile project(':common-ios')
+    compile "org.jetbrains.kotlinx:jsonparser-native:$serialization_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
+    compile "io.ktor:ktor-client-ios:$ktor_version"
 }
 
 sourceSets {
+    //noinspection GroovyAssignabilityCheck
     main {
         component {
             targets = ['ios_x64', 'ios_arm64']
