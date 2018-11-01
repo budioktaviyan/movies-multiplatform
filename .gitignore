@@ -166,5 +166,5 @@ fastlane/test_output
 
 # Other
 .DS_Store
-*.xcodeproj/project.xcworkspace/xcshareddata
-*.xcworkspace/xcshareddata
+ios/Movie\.xcodeproj/project.xcworkspace/xcshareddata
+ios/Movie\.xcworkspace/xcshareddata
