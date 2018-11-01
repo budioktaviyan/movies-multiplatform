@@ -6,5 +6,5 @@ target 'Movie' do
   use_frameworks!
 
   # Pods for Movie
-  pod 'Kingfisher', '4.9.0'
+  pod 'Kingfisher'
 end

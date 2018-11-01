@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-platform-android'
+apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 28
@@ -23,9 +25,10 @@ android {
 }
 
 dependencies {
-    api project(':common-android')
+    expectedBy project(':common')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.github.bumptech.glide:glide:4.7.1'
 }
