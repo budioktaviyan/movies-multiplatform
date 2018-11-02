@@ -1,20 +1,24 @@
-//
-//  ViewController.swift
-//  Movie
-//
-//  Created by Budi Oktaviyan on 01/11/18.
-//  Copyright © 2018 Kotlin. All rights reserved.
-//
-
 import UIKit
+import KotlinCommon
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MovieContractView {
+
+    private let presenter: MoviePresenter = MoviePresenter(movie: Movie(repository: MovieRepository()))
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        title = "Movie"
+        view.backgroundColor = .white
+        presenter.doInitPresenter(view: self)
+        presenter.showDiscoverMovie()
     }
 
-
+    func onShowDiscoverMovie(data: MovieData) {
+        _ = data.results.compactMap {
+            print("Title: \($0.title)")
+            print("Poster: \($0.posterPath)")
+            print("Backdrop: \($0.backdropPath)")
+        }
+        print("Total Pages: \(data.totalPages)")
+    }
 }
-

@@ -1,12 +1,12 @@
 package id.kotlin.multiplatform.presentation
 
-import id.kotlin.multiplatform.data.Data
+import id.kotlin.multiplatform.data.MovieData
 
 interface MovieContract {
 
     interface View {
 
-        fun onShowDiscoverMovie(data: Data)
+        fun onShowDiscoverMovie(data: MovieData)
     }
 
     interface Presenter {

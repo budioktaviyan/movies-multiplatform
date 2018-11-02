@@ -1,14 +1,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:context=".home.HomeActivity">
 
-    <TextView
-        android:id="@+id/tv_home"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_home"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:textSize="20sp"
-        tools:text="Home" />
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:reverseLayout="false"
+        app:spanCount="2"
+        tools:listitem="@layout/item_home" />
 </RelativeLayout>

@@ -7,9 +7,9 @@ import kotlinx.serialization.json.content
 
 class MovieRepository {
 
-    fun parse(response: String): Data {
+    fun parse(response: String): MovieData {
         val element: JsonObject = JsonTreeParser(response).read() as? JsonObject
-                  ?: return Data(results = emptyList(), totalPages = 0)
+                  ?: return MovieData(results = emptyList(), totalPages = 0)
         val totalPages: Long = element["total_pages"].content.toLong()
         val results: List<Result> = element["results"].jsonArray.map {
             val json: JsonObject = it.jsonObject
@@ -24,6 +24,6 @@ class MovieRepository {
             )
         }
 
-        return Data(results = results, totalPages = totalPages)
+        return MovieData(results = results, totalPages = totalPages)
     }
 }
